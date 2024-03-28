@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>Roller Dice</head>
+  <style>
+    
+    body
+     {
+      background-color:black;
+      display: flex;
+      text-align: left;
+      text-decoration: solid;
+      text-decoration: aqua;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial;
+    }
+    #diceContainer 
+    {
+      text-align: center;
+      transform: translate(-50%,-50%);
+      
+    }
+    button
+     {
+        position: relative;
+      background-color:rgb(206, 11, 11);
+      border: 2px;
+      color:rgb(16, 10, 11);
+      bottom: 150px;
+      top: 100px;
+      left: 72%;
+      padding: 15px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 4px;
+      cursor: pointer;
+      transform: translate(-50%,-50%);
+      border-radius: 20px;
+      
+    }
+  </style>
+<body>
+  
+<div id="diceContainer">
+
+  <button onclick="rollDice()">ROLL</button>
+  <img id="diceImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd9sa-wKmjpgCXiqhcHkCIZSAB8nxdPX0k8lv1vRHByviNzJo7dkoyufXK7jJ2DES5Koc&usqp=CAU" style="width:100px;height:100px;">
+
+</div>
+
+<script>
+var diceImages = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd9sa-wKmjpgCXiqhcHkCIZSAB8nxdPX0k8lv1vRHByviNzJo7dkoyufXK7jJ2DES5Koc&usqp=CAU","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy3J7VEv3K5hNZZsMKmAqPj8Vt_3LcQ3sAjcF70XMtAoGzwXkan8i68Yd66b-iPFjVe3g&usqp=CAU","https://opengameart.org/sites/default/files/dice_three.png","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTRy1h3cae-Gego4AAFKu2JcEh7IQHDRbmA5K3DFTQcw&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREHLlIrGAMr32OpozhbcD5lTO_eOJUzG-4CN6Bq3xCIA&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThu50c63_y5Ot9xDXJ4Brelz0Zsth6JU9HI8B1v9oR8BlTrtFL2EB04rK3SnktwyvZsNk&usqp=CAU"];
+
+function rollDice()
+ {
+  
+  var randomNumber = Math.floor(Math.random() * 6) + 1;
+
+  document.getElementById("diceImage").src = diceImages[randomNumber - 1];
+}
+
+</script>
+
+</body>
+</html>
